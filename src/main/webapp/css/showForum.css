@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#forumHeader{
+	background: #ddd;
+}
+
+#headCrumb{
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#postTopic{
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}

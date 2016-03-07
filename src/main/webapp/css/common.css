@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+
+body,div,ul,li {
+	padding: 0;
+	margin: 0;
+}
+
+
+body { padding-top: 60px; background: #f1f2f6;}
+
+.clear {
+	clear: both;
+}
+
+#context{
+	margin:0 auto;
+}
+
+#allPost{
+	width: 800px;
+	background: #fff;
+	margin-top: 10px;
+	float: left;
+}
+
+#rightInfo{
+	width: 310px;
+	float: right;
+
+}
+
+#bottom{
+	height: 50px;
+	margin:0 auto;
+	margin-top: 20px;
+}
+
+#forumList1{
+	border-bottom:1px solid #ddd; 
+	border-right:1px solid #ddd;
+	padding-top:10px; 
+	padding-bottom:10px;
+}
+
+#forumList2{
+	border-bottom:1px solid #ddd;
+	padding-top:10px; 
+	padding-bottom:10px;
+}
+
+#contextLeft{
+	width:400px;
+	height: 234px;
+	float: left;
+	margin-right: 5px;
+
+}
+
+#contextRight{
+	width:400px;
+	height: 234px;
+	background:#fff;
+	float: left;
+	padding-left: 2px;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+#carousel{
+	height: 234px;
+}
+
+#copyRight{
+	margin-top: 15px;
+	color: #999;
+	text-align: center;
+}
+
+#alertBar{
+	display: none;
+}
+
+#pageNum{
+	margin:0 auto;
+}

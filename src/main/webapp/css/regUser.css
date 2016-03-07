@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+.form-horizontal .control-group {
+	margin-bottom: 16px;
+	
+}
+
+.wrap {
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	overflow: auto;
+}
+
+.main {
+	width: 600px;
+}
+
+.info {
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: 40px;
+	color: #333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+#tittle {
+	text-align: center;
+}

@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+
+#forumHeader{
+	background: #ddd;
+}
+
+#headCrumb{
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#postTopic{
+	float:right;
+	margin-top:10px;
+	margin-right:10px;
+}
+
+#post{
+	border-bottom:1px solid #ddd;
+}
+
+
+
+#postReplayContainer{
+	margin:0 auto;
+	margin-top:20px;
+	float:left;
+	width:800px;
+	background:#fff;
+}
+
+#postReplay{
+	margin:0 auto;
+	margin-top:10px;
+}
+
+#replayButton{
+	margin-left:75px;
+	margin-top:10px;
+}
+
+#location{
+	float:left;
+}
+
+#postTittle #tittle{
+	margin-left:10px;
+	float:left;
+}
+
+#postTittle label{
+	font-size: 10px;
+	margin:0 0;
+	margin-top:5px;
+}
+
+#postTittle h1{
+	font-size: 25px;
+}
+
+#postText{
+	margin:0 auto;
+}
+
+#postInfo{
+	float:right;
+	margin-right:10px
+}
+
+#postInfo label{
+	float:right;
+	margin-right:20px;
+	margin-top:10px;
+}
+
+#avatar{
+	float:left; 
+	width:130;
+	height:75px; 
+	margin-bottom: 10px;
+}
+
+#author{
+	float:left;
+	width:130px;
+	height:150px;
+
+}
+
+#text{
+	float:left;
+	min-height:170px;
+	width:620px;
+}
+
+#deleteTopic{
+	float:right;
+	margin-top: 25px;
+	margin-right: 10px;
+}
+
+#authorName{
+	float:left;
+	height:20px;
+	width:130;
+}

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- <constant name="struts.action.extension" value="do,go,action"/> --><!-- 指定请求后缀 -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+
+	<package name="UserAction" namespace="/" extends="struts-default">
+		<global-results>
+			<result name="error">/error.jsp</result>
+			<result name="login">/login.jsp</result>
+		</global-results>
+
+		<action name="*UserAction" class="edu.zsc.cxl.bbs.action.UserAction"
+			method="{1}User">
+			<result name="regUser" type="redirect">User/UserInfo.jsp</result>
+			<result name="findByNameUser"> User/UserInfo1.jsp </result>
+			<result name="editUser" type="redirect">User/UserInfo.jsp</result>
+			<result name="loginUser" type="redirect">index.jsp</result>
+			<result name="logoutUser" type="redirect">index.jsp</result>
+			<result name="editPasswordUser">User/UserInfo.jsp</result>
+			<result name="showUser">User/UserInfo.jsp</result>
+			<result name="uploadUser" type="redirect">User/UserInfo.jsp</result>
+			<result name="getAllUser">background/allUser.jsp</result>
+			<result name="deleteUser" type="redirectAction">getAllUserAction</result>
+			<result name="adminRegUser" type="redirectAction">getAllUserAction</result>
+			<result name="adminEditPasswordUser" type="redirectAction">getAllUserAction</result>
+			<result name="editGroupUser" type="redirectAction">getAllUserAction</result>
+		</action>
+
+		<action name="*Category" class="edu.zsc.cxl.bbs.action.CategoryAction"
+			method="{1}Category">
+			<result name="createCategory" type="redirectAction">adminFindAllCategory
+			</result>
+			<result name="findAllCategory" type="redirect">index.jsp</result>
+			<result name="getForumAndCategory">index.jsp</result>
+			<result name="adminFindAllCategory">background/allCategory.jsp</result>
+			<result name="editCategory" type="redirectAction">adminFindAllCategory</result>
+			<result name="deleteCategory" type="redirectAction">adminFindAllCategory</result>
+			<result name="adminGetForumAndCategory">background/index.jsp</result>
+		</action>
+
+		<action name="*Forum" class="edu.zsc.cxl.bbs.action.ForumAction"
+			method="{1}Forum">
+			<result name="deleteForum" type="redirect">index.jsp</result>
+			<result name="findForum">Forum/showForum.jsp</result>
+			<result name="showTopicForum">Forum/showForum.jsp</result>
+			<result name="adminCreateForum" type="redirectAction">getCategoryAndForum</result>
+			<result name="findAllForum" >background/allForum.jsp</result>
+			<result name="updateForum" type="redirectAction">getCategoryAndForum</result>
+			<result name="getCategoryAndForum">background/allForum.jsp</result>
+			<result name="adminShowTopicForum">background/allTopic.jsp</result>
+		</action>
+
+		<action name="*Admin" class="edu.zsc.cxl.bbs.action.AdminAction"
+			method="{1}Admin">
+		<result name="createAdmin" type="redirectAction">getAllAdmin</result>
+		<result name="editPasswordAdmin" type="redirectAction">getAllAdmin</result>
+		<result name="updateAdmin" type="redirectAction">getAllAdmin</result>
+		<result name="deleteAdmin" type="redirectAction">getAllAdmin</result>
+		<result name="loginAdmin" type="redirectAction">getInfoAdmin</result>
+		<result name="getInfoAdmin">background/index.jsp</result>
+		<result name="getAllAdmin">background/allAdmin.jsp</result>
+		<result name="adminCreateTopic" type="redirectAction">getInfoAdmin</result>
+		</action>
+
+		<action name="*Topic" class="edu.zsc.cxl.bbs.action.TopicAction"
+			method="{1}Topic">
+			<result name="createTopic" type="redirectAction">findInPageTopic</result>
+			<result name="deleteTopic" type="redirectAction">findInPageTopic</result>
+			<result name="findAllTopic" type="redirect">index.jsp</result>
+			<result name="showTopic">/Topic/showTopic.jsp</result>
+			<result name="ByHQshowTopicL">/Topic/showTopic.jsp</result>
+			<result name="findInPageTopic">index.jsp</result>
+			<result name="getNewAndHotTopic">index.jsp</result>
+			<result name="getCarouselTopic">index.jsp</result>
+			<result name="adminDeleteTopic">background/allTopic.jsp</result>
+			<result name="adminCreateTopic">background/allTopic.jsp</result>
+			<result name="setHighLightTopic">background/allTopic.jsp</result>
+			<result name="getHighLightTopic">background/setCarousel.jsp</result>
+			<result name="setCarouselTopic" type="redirectAction">getHighLightTopic</result>
+		</action>
+
+		<action name="*Post" class="edu.zsc.cxl.bbs.action.PostAction"
+			method="{1}Post">
+			<result name="showAllPost">Topic/showTopic.jsp</result>
+			<result name="createPost" type="redirectAction">showAllPost</result>
+			<result name="deletePost" type="redirectAction">showAllPost</result>
+		</action>
+
+		<action name="*Review" class="edu.zsc.cxl.bbs.action.ReviewAction"
+			method="{1}Review">
+			<result name="createReview">index.jsp</result>
+		</action>
+
+		<action name="*Group" class="edu.zsc.cxl.bbs.action.GroupAction"
+			method="{1}Group">
+			<result name="createGroup" type="redirectAction">findAllGroup</result>
+			<result name="deleteGroup" type="redirectAction">findAllGroup</result>
+			<result name="updateGroup" type="redirectAction">findAllGroup</result>
+			<result name="findAllGroup">background/allGroup.jsp</result>
+		</action>
+
+		
+		<action name="*Validate" class="edu.zsc.cxl.bbs.action.ValidateAction"
+			method="{1}Validate">
+			<result name="success"> /login.jsp</result>
+		</action>
+		
+		<action name="*Index" class="edu.zsc.cxl.bbs.action.BaseAction" method="{1}Index">
+		<result name="getForumAndCategoryIndex" type="redirectAction">findInPageTopicIndex</result>
+		<result name="adminGetForumAndCategoryIndex">background/allTopic.jsp</result>
+		<result name="findInPageTopicIndex">index.jsp</result>
+		</action>
+	</package>
+
+</struts>

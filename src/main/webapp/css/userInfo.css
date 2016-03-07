@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+#leftMenu{
+	margin:0 auto;
+	margin-top: 10px;
+	float: left;
+
+}
+#mainContext{
+	margin:0 auto;
+	margin-top: 10px;
+	float: left;
+	background: #fff;
+}
+#avatar{
+	float: left;
+
+
+}
+
+#userInfo{
+	margin-left: 20px;
+}
+
+.userInfo{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
